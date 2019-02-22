@@ -8,9 +8,20 @@ class App extends Component {
     show: false,
     options: {}
   };
+  timeout = null;
   handleClick = action => {
-    console.log(action);
+    this.timeout = setTimeout(() => {
+      this.setState({ show: false, options: {} });
+    }, 5000);
+    if (action === 'simple') {
+      this.setState({ show: true, options: {} });
+    }
   };
+  componentWillMount() {
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+    }
+  }
   render() {
     const { show, options } = this.state;
     return (

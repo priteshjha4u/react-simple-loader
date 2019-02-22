@@ -16,6 +16,15 @@ class App extends Component {
     if (action === 'simple') {
       this.setState({ show: true, options: {} });
     }
+    if (action === 'simpleText') {
+      this.setState({ show: true, options: { message: 'Request in progress! Please wait...' } });
+    }
+    if (action === 'simpleTextPosition') {
+      this.setState({ show: true, options: { message: 'Request in progress! Please wait...', position: 'top' /* or bottom */ } });
+    }
+    if (action === 'simpleColor') {
+      this.setState({ show: true, options: { color: '#FF0000' } });
+    }
   };
   componentWillMount() {
     if (this.timeout) {

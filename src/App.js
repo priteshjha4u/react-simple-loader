@@ -17,10 +17,13 @@ class App extends Component {
       this.setState({ show: true, options: {} });
     }
     if (action === 'simpleText') {
-      this.setState({ show: true, options: { message: 'Request in progress! Please wait...' } });
+      this.setState({ show: true, options: { message: 'Request in progress. Please wait...' } });
     }
-    if (action === 'simpleTextPosition') {
-      this.setState({ show: true, options: { message: 'Request in progress! Please wait...', position: 'top' /* or bottom */ } });
+    if (action === 'simpleTextPositionTop') {
+      this.setState({ show: true, options: { message: 'Request in progress. Please wait...', position: 'top' /* or top */ } });
+    }
+    if (action === 'simpleTextPositionBottom') {
+      this.setState({ show: true, options: { message: 'Request in progress. Please wait...', position: 'bottom' /* or top */ } });
     }
     if (action === 'simpleColor') {
       this.setState({ show: true, options: { color: '#FF0000' } });
@@ -34,7 +37,7 @@ class App extends Component {
   render() {
     const { show, options } = this.state;
     return (
-      <React.Fragment>
+      <div className="container-fluid">
         <div className="row bg-dark text-white shadow p-2">
           <div className="col-md-12">
             <h4 className="text-center">React Simple Loader</h4>
@@ -46,23 +49,26 @@ class App extends Component {
         <div className="row justify-content-center align-items-center">
           <div className="card">
             <div className="card-body">
-              <button cls="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simple')}>
+              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simple')}>
                 Simple Loader
               </button>
-              <button cls="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleText')}>
+              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleText')}>
                 Loader with text
               </button>
-              <button cls="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleTextPosition')}>
-                Loader with text position
+              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleTextPositionTop')}>
+                Loader with text position top
               </button>
-              <button cls="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleColor')}>
+              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleTextPositionBottom')}>
+                Loader with text position bottom
+              </button>
+              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleColor')}>
                 Custom color loader
               </button>
             </div>
           </div>
         </div>
         {show && <ReactSimpleLoader show={show} options={options} />}
-      </React.Fragment>
+      </div>
     );
   }
 }

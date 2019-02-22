@@ -1,14 +1,25 @@
+.react-simple-loader {
+  overflow: hidden;
+}
+
 /* loading messgae */
 .react-simple-loader .loading-message {
   position: absolute;
-  top: 58%;
+  top: 52%;
   z-index: 9999;
   color: #fff;
   width: 100%;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  text-transform: uppercase;
+}
+
+.top {
+  top: 10% !important;
+}
+
+.bottom {
+  top: 85% !important;
 }
 
 /* Absolute Center reactSimpleLoaderSpinner */

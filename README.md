@@ -1,15 +1,24 @@
-# React Redux Starter App
+# React Simple Loader
 
-Simple yet very useful loader built with react.
+Simple, Very tiny and useful loader built with react.
+
+## Features
+
+- easy to use api.
+- mask background UI with a transparent overlay.
+- optional text and text position support.
 
 ## How to use
-This repo contains demo files as well as the react virtual component files.
-In order to use react virtual component in you react application, follow below steps:
+
+This repo contains demo files as well as the react simple loader component files.
+In order to use react simple loader component in you react application, follow below steps:
+
 - clone this repo
 - copy `ReactSimpleLoader.js` and `ReactSimpleLoader.css` to your working directory or however you want to use.
 - about how to use inside your code, see the `app.js` inside `src/app.js`.
 
 ## Demo
+
 [Click here](https://priteshjha4u.github.io/react-simple-loader/) to see running demo.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

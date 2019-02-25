@@ -7,7 +7,7 @@ import ReactSimpleLoader from './ReactSimpleLoader';
 class App extends Component {
   state = {
     showLoader: false,
-    LoaderLoaderOptions: {}
+    LoaderOptions: {}
   };
   timeout = null;
   handleClick = action => {

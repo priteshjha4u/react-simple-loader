@@ -17,16 +17,13 @@ class App extends Component {
       this.setState({ show: true, options: {} });
     }
     if (action === 'simpleText') {
-      this.setState({ show: true, options: { message: 'Request in progress. Please wait...' } });
+      this.setState({ show: true, options: { message: 'Please wait...' } });
     }
     if (action === 'simpleTextPositionTop') {
-      this.setState({ show: true, options: { message: 'Request in progress. Please wait...', position: 'top' /* or top */ } });
+      this.setState({ show: true, options: { message: 'Please wait...', position: 'top' /* or top */ } });
     }
     if (action === 'simpleTextPositionBottom') {
-      this.setState({ show: true, options: { message: 'Request in progress. Please wait...', position: 'bottom' /* or top */ } });
-    }
-    if (action === 'simpleColor') {
-      this.setState({ show: true, options: { color: '#FF0000' } });
+      this.setState({ show: true, options: { message: 'Please wait...', position: 'bottom' /* or top */ } });
     }
   };
   componentWillMount() {
@@ -61,13 +58,10 @@ class App extends Component {
               <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleTextPositionBottom')}>
                 Loader with text position bottom
               </button>
-              <button className="btn btn-outline-primary ml-2 mb-2" onClick={() => this.handleClick('simpleColor')}>
-                Custom color loader
-              </button>
             </div>
           </div>
         </div>
-        {show && <ReactSimpleLoader show={show} options={options} />}
+        <ReactSimpleLoader show={show} options={options} />
       </div>
     );
   }

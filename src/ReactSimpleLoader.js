@@ -2,30 +2,25 @@ import React from 'react';
 import './ReactSimpleLoader.css';
 import PropTypes from 'prop-types';
 
-class ReactSimpleLoader extends React.Component {
-  componentDidMount() {
-    document.body.style.overflow = 'hidden';
+const ReactSimpleLoader = props => {
+  if (!props.show) {
+    return null;
   }
-  componentWillUnmount() {
-    document.body.style.overflow = '';
+  let message = '',
+    position = '';
+  if (props.options && props.options.message) {
+    message = props.options.message;
   }
-  render() {
-    let message = '',
-      position = '';
-    if (this.props.options && this.props.options.message) {
-      message = this.props.options.message;
-    }
-    if (this.props.options && this.props.options.position) {
-      position = this.props.options.position;
-    }
-    return (
-      <div className="react-simple-loader">
-        <div className="loading" />
-        <div className={`loading-message ${position}`}>{message}</div>
-      </div>
-    );
+  if (props.options && props.options.position) {
+    position = props.options.position;
   }
-}
+  return (
+    <div className="react-simple-loader">
+      <div className="loading" />
+      {message ? <div className={`loading-message ${position}`}>{message}</div> : null}
+    </div>
+  );
+};
 
 ReactSimpleLoader.propTypes = {
   show: PropTypes.bool.isRequired,

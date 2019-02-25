@@ -3,27 +3,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ReactSimpleLoader from './ReactSimpleLoader';
 
+/* This component demonstrate, how to use  ReactSimpleLoader component with differnet examples. */
 class App extends Component {
   state = {
-    show: false,
-    options: {}
+    showLoader: false,
+    LoaderLoaderOptions: {}
   };
   timeout = null;
   handleClick = action => {
     this.timeout = setTimeout(() => {
-      this.setState({ show: false, options: {} });
+      this.setState({ showLoader: false, LoaderOptions: {} });
     }, 5000);
     if (action === 'simple') {
-      this.setState({ show: true, options: {} });
+      this.setState({ showLoader: true, LoaderOptions: {} });
     }
     if (action === 'simpleText') {
-      this.setState({ show: true, options: { message: 'Please wait...' } });
+      this.setState({ showLoader: true, LoaderOptions: { message: 'Please wait...' } });
     }
     if (action === 'simpleTextPositionTop') {
-      this.setState({ show: true, options: { message: 'Please wait...', position: 'top' /* or top */ } });
+      this.setState({ showLoader: true, LoaderOptions: { message: 'Please wait...', position: 'top' /* or top */ } });
     }
     if (action === 'simpleTextPositionBottom') {
-      this.setState({ show: true, options: { message: 'Please wait...', position: 'bottom' /* or top */ } });
+      this.setState({ showLoader: true, LoaderOptions: { message: 'Please wait...', position: 'bottom' /* or top */ } });
     }
   };
   componentWillMount() {
@@ -32,7 +33,7 @@ class App extends Component {
     }
   }
   render() {
-    const { show, options } = this.state;
+    const { showLoader, LoaderOptions } = this.state;
     return (
       <div className="container-fluid">
         <div className="row bg-dark text-white shadow p-2">
@@ -61,7 +62,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <ReactSimpleLoader show={show} options={options} />
+        <ReactSimpleLoader show={showLoader} options={LoaderOptions} />
       </div>
     );
   }

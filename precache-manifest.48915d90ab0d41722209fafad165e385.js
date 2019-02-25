@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/react-simple-loader/static/js/runtime~main.912d7c89.js"
   },
   {
-    "revision": "985423d218c11b78c299",
-    "url": "/react-simple-loader/static/js/main.985423d2.chunk.js"
+    "revision": "e94c134053021b53b075",
+    "url": "/react-simple-loader/static/js/main.e94c1340.chunk.js"
   },
   {
     "revision": "c9b14caee3ad9afb2c6e",
     "url": "/react-simple-loader/static/js/2.c9b14cae.chunk.js"
   },
   {
-    "revision": "985423d218c11b78c299",
+    "revision": "e94c134053021b53b075",
     "url": "/react-simple-loader/static/css/main.33635992.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-simple-loader/static/css/2.c1047d7d.chunk.css"
   },
   {
-    "revision": "80fcd79683c2d5c637d9636b9a474046",
+    "revision": "e4717669052a79c322d1803b2a2a03d2",
     "url": "/react-simple-loader/index.html"
   }
 ];

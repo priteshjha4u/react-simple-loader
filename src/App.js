@@ -27,7 +27,7 @@ class App extends Component {
       this.setState({ showLoader: true, LoaderOptions: { message: 'Please wait...', position: 'bottom' /* or top */ } });
     }
   };
-  componentWillMount() {
+  componentWillUnmount() {
     if (this.timeout) {
       clearTimeout(this.timeout);
     }
